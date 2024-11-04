@@ -25,6 +25,9 @@ localization:
    * - :guilabel:`Indian E-waybill`
      - `l10n_in_edi_ewaybill`
      - :ref:`Indian E-way bill integration <india/e-waybill>`
+   * - :guilabel:`Indian - Check GST Number Status`
+     - `l10n_in_gstin_status`
+     - :ref:`Indian Check GST Number Status <india/gstin_status>`
    * - :guilabel:`Indian - GSTR India eFiling`
      - `l10n_in_reports_gstr`
      - :ref:`Indian GST Return filing <india/gstr>`
@@ -347,6 +350,33 @@ fill out the :guilabel:`Cancel reason` and :guilabel:`Cancel remarks` fields. Th
    - Once you request to cancel the E-Way bill, Odoo automatically submits the JSON-signed file to
      the government portal. You can click :guilabel:`Process Now` if you want to process the invoice
      immediately.
+
+.. _india/gstin_status:
+
+Indian Check GSTIN Status
+=========================
+
+The :guilabel:`Indian - Check GST Number Status` module allows you to verify the status of a GSTIN
+(Goods and Services Tax Identification Number) directly from Odoo.
+
+There are two ways to verify the status of a GST Number in Odoo:
+
+#. To verify the status of a partner's GST Number, go to :menuselection:`Accounting/Invoicing --> Customers/Vendors`
+   and select a partner. In the :guilabel:`GSTIN` field, click on the :guilabel:`Check GSTIN Status` button.
+
+   .. image:: india/gstin-status-partner.png
+      :alt: Check GSTIN status of a partner
+
+#. To verify the status of a GST Number entered in an invoice, go to :menuselection:`Accounting/Invoicing --> Invoices\Vendor Bills`
+   and create a new invoice\bill and post the invoice\bill. In the :guilabel:`GST Status` field, click on the :guilabel:`Check GSTIN Status` button.
+
+   .. image:: india/gstin-status-invoice.png
+      :alt: Check GSTIN status of an invoice
+
+A notification will be popped as shown below and the partner GSTIN status and verification date will be logged in partner form.
+
+.. image:: india/gstin-status-notification.png
+   :alt: GSTIN status notification
 
 .. _india/gstr:
 
